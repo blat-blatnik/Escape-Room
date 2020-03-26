@@ -104,7 +104,7 @@ the dependancy. Library files are provided
 for you in the same directory so we hope
 that compiling the GUI won't be a problem.
 
-## How to compiler with the GUI?
+## How to compile with the GUI?
 
 #### With GCC
 
@@ -136,6 +136,8 @@ pre-compiled programs for [windows](/bin/escape.exe) and [linux](/bin/escape.out
 in the [`/bin`](/bin) directory.
 
 ## How to compile without the GUI? (NOGUI)
+
+Just #define NOGUI globally from the compiler.
 
 ```bash
 $ gcc escape.c -std=c99 -D NOGUI -lm
