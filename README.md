@@ -1,10 +1,10 @@
 # Escape Room
 
+![greetings](/screenshots/agent.png)
+
 Agents use reinforcement learning to learn
 how to navigate and escape a small room as
 quickly as possible.
-
-![greetings](/screenshots/agent.png)
 
 This is the final project for the Reinforcement Learning Practical course from the University of Groningen.
 
