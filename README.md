@@ -1,6 +1,6 @@
 # Escape Room
 
-![](/screenshots/agent.png)
+<img align="left" width="100" height="100" src="/screenshots/agent.png">
 
 Agents use reinforcement learning to learn
 how to navigate and escape a small room as
@@ -16,9 +16,11 @@ The _room_ is represented by a grid of N&times;M cells. Multiple _agents_ can in
 
 The agents use [Q-learning](https://en.wikipedia.org/wiki/Q-learning) to learn an optimal path through the room. All of the agents share the same single Q-table, so this is a shared Q-learning algorithm. The agents get rewarded for successfully escaping the room, and they get punished for dying. The agents are also punished for every time step in the simulation until they escape or die. This encourages the agents to escape the room as quickly as possible, as they don't want to accumulate a lot of punishment for just standing around. We use the [&epsilon;-greedy](https://jamesmccaffrey.wordpress.com/2017/11/30/the-epsilon-greedy-algorithm/) policy selection, meaning that agents at random pick either the best action so far, or a completely random action each turn.
 
+<img align="right" width="200" height="200" src="/screenshots/vision-radius.png">
+
 The [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality) definitely rears its ugly head here, and for this assignment we were asked to limit our state space to no more than 1,000,000 states. As a result of this, the agents have a very limited view of the environment. They can only see 2 tiles away in each of the 4 directions around them. They also don't exactly see the tiles in their vision - they only know whether another agent occupies them, and if the tile is glass, a door, or a bandage they can see whether the glass was shattered, or door was opened, or bandage taken. This is a huge handicap, especially since the agents cannot see diagonally. However, it does mean there are less than 1,000,000 states in a 8&times;9 room.
 
-![](/screenshots/vision-radius.png)
+<br/>
 
 This algorithm works decently well, the agents will generally discover a pretty good escape path through the maze in a relative small number of rounds. However, it is far from perfect. Q-learning is generally known to have flaws in dynamic, multi-agent environments such as this one. The agents don't appear to learn to coordinate very well - for example they won't move "in unison", or help each other escape. Since the agents don't see diagonally, they can't predict when another agent will bump into them around a corner, which can sometimes make them get stuck for long periods of time.
 
