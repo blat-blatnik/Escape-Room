@@ -20,9 +20,7 @@ The agents use [Q-learning](https://en.wikipedia.org/wiki/Q-learning) to learn a
 
 The [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality) definitely rears its ugly head here, and for this assignment we were asked to limit our state space to no more than 1,000,000 states. As a result of this, the agents have a very limited view of the environment. They can only see 2 tiles away in each of the 4 directions around them. They also don't exactly see the tiles in their vision - they only know whether another agent occupies them, and if the tile is glass, a door, or a bandage they can see whether the glass was shattered, or door was opened, or bandage taken. This is a huge handicap, especially since the agents cannot see diagonally. However, it does mean there are less than 1,000,000 states in a 8&times;9 room.
 
-<br/>
-
-<img align="right" width="80" height="120" src="/screenshots/corner-case.png">
+<img align="right" width="90" height="120" src="/screenshots/corner-case.png">
 
 This algorithm works decently well, the agents will generally discover a pretty good escape path through the maze in a relative small number of rounds. However, it is far from perfect. Q-learning is generally known to have flaws in dynamic, multi-agent environments such as this one. The agents don't appear to learn to coordinate very well - for example they won't move "in unison", or help each other escape. Since the agents don't see diagonally, they can't predict when another agent will bump into them around a corner, which can sometimes make them get stuck for long periods of time.
 
