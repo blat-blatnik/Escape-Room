@@ -30,17 +30,17 @@ This algorithm works decently well, the agents will generally discover a pretty 
 
 The consists of an N&times;M grid of cells, where both N and M are between 1 and 9. Each cell can be one of the following types:
 
-#### Floor
+### Floor
 
 This is the equivalent of empty space. Agents can freely inhabit these tiles.
 
-#### Wall
+### Wall
 
 ![](/screenshots/wall-tile.png)
 
 Agents cannot pass through these tiles by any means. As a side note, everything outside of the N&times;M room is also considered to be a wall.
 
-#### Door
+### Door
 
 ![](/screenshots/door-tile.png)
 
@@ -48,7 +48,7 @@ The door is a dynamic element in the room. The agents obviously cannot walk thro
 
 ![](/screenshots/open-door-tile.png)
 
-#### Glass
+### Glass
 
 ![](/screenshots/glass-tile.png)
 
@@ -56,13 +56,13 @@ Another dynamic element. Glass is very similar to doors - the agents first canno
 
 ![](/screenshots/broken-glass-tile.png)
 
-#### Bandage
+### Bandage
 
 ![](/screenshots/bandage-tile.png)
 
 The bandage will heal any agent that walks over it back to the full 2 health points, and it will be consumed in the process. The bandage will be consumed even if the agent is _already_ at full health.
 
-#### Goal
+### Goal
 
 ![](/screenshots/goal-tile.png)
 
