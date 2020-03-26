@@ -38,6 +38,8 @@ This is the equivalent of empty space. Agents can freely inhabit these tiles.
 
 Agents cannot pass through these tiles by any means. As a side note, everything outside of the N&times;M room is also considered to be a wall.
 
+<br/>
+
 ---
 
 ### Door
