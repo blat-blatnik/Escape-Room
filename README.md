@@ -6,9 +6,7 @@ Agents use reinforcement learning to learn
 how to navigate and escape a small room as
 quickly as possible.
 
-This is the final project for the Reinforcement Learning Practical course from the University of Groningen.
-
-by s3301419 & s3324818
+This was for a final project for the Reinforcement Learning Practical course from the University of Groningen.
 
 email s3301419@student.rug.nl
 
