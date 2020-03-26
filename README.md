@@ -1,6 +1,6 @@
 # Escape Room
 
-![greetings](/screenshots/agent.png)
+![](/screenshots/agent.png)
 
 Agents use reinforcement learning to learn
 how to navigate and escape a small room as
@@ -11,6 +11,62 @@ This is the final project for the Reinforcement Learning Practical course from t
 by s3301419 & s3324818
 
 email s3301419@student.rug.nl
+
+## How it works
+
+The _room_ is represented by a grid of N&times;M cells. Multiple _agents_ can inhabit this room, and try to escape the room by reaching the "goal" cell, while avoiding death. Each agent starts the escape with 2 point of health, and walking over broken glass lowers their health by 1 point. When their health drops to 0, they die. Each simulation round lasts for 200 time steps, after which the simulation is reset and the whole escape process starts again. Each agent gets 1 move per time-step. They can move in any of the 4 direction, or they can stand still. If two agents try to walk into the same tile, they "bump into each other" and both agents remain on the tile they started for that turn.
+
+The agents use [Q-learning](https://en.wikipedia.org/wiki/Q-learning) to learn an optimal path through the room. All of the agents share the same single Q-table, so this is a shared Q-learning algorithm. The agents get rewarded for successfully escaping the room, and they get punished for dying. The agents are also punished for every time step in the simulation until they escape or die. This encourages the agents to escape the room as quickly as possible, as they don't want to accumulate a lot of punishment for just standing around. We use the [&epsilon;-greedy](https://jamesmccaffrey.wordpress.com/2017/11/30/the-epsilon-greedy-algorithm/) policy selection, meaning that agents at random pick either the best action so far, or a completely random action each turn.
+
+The [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality) definitely rears its ugly head here, and for this assignment we were asked to limit our state space to no more than 1,000,000 states. As a result of this, the agents have a very limited view of the environment. They can only see 2 tiles away in each of the 4 directions around them. They also don't exactly see the tiles in their vision - they only know whether another agent occupies them, and if the tile is glass, a door, or a bandage they can see whether the glass was shattered, or door was opened, or bandage taken. This is a huge handicap, especially since the agents cannot see diagonally. However, it does mean there are less than 1,000,000 states in a 8&times;9 room.
+
+![](/screenshots/vision-radius.png)
+
+This algorithm works decently well, the agents will generally discover a pretty good escape path through the maze in a relative small number of rounds. However, it is far from perfect. Q-learning is generally known to have flaws in dynamic, multi-agent environments such as this one. The agents don't appear to learn to coordinate very well - for example they won't move "in unison", or help each other escape. Since the agents don't see diagonally, they can't predict when another agent will bump into them around a corner, which can sometimes make them get stuck for long periods of time.
+
+![](/screenshots/corner-case.png)
+
+## The room
+
+The consists of an N&times;M grid of cells, where both N and M are between 1 and 9. Each cell can be one of the following types:
+
+#### Floor
+
+This is the equivalent of empty space. Agents can freely inhabit these tiles.
+
+#### Wall
+
+![](/screenshots/wall-tile.png)
+
+Agents cannot pass through these tiles by any means. As a side note, everything outside of the N&times;M room is also considered to be a wall.
+
+#### Door
+
+![](/screenshots/door-tile.png)
+
+The door is a dynamic element in the room. The agents obviously cannot walk through them when they are closed. Rather, the first time an agent tries to move into a door cell, the door will be opened, but the agent will stay in place. The door will then stay open until the end of the simulation round since there is no way for the agents to close a door.
+
+![](/screenshots/open-door-tile.png)
+
+#### Glass
+
+![](/screenshots/glass-tile.png)
+
+Another dynamic element. Glass is very similar to doors - the agents first cannot walk through it. The first time an agent tried to move into a glass tile, the glass will shatter, and the agent will stay in place. If an agent then walks over the glass, they will get hurt and lose 1 health point. This is the only way agents can get hurt in the room.
+
+![](/screenshots/broken-glass-tile.png)
+
+#### Bandage
+
+![](/screenshots/bandage-tile.png)
+
+The bandage will heal any agent that walks over it back to the full 2 health points, and it will be consumed in the process. The bandage will be consumed even if the agent is _already_ at full health.
+
+#### Goal
+
+![](/screenshots/goal-tile.png)
+
+This marks the exit of the room - when an agents walks into a goal tile, they are removed from the room. There can be multiple goals in the room.
 
 ## Options
 
@@ -52,7 +108,7 @@ $ cl escape.c glfw3.lib msvcrt.lib user32.lib gdi32.lib shell32.lib
 $ clang escape.c -std=c99 -L. -lm -lglfw3
 ```
 
-![room1 GUI](/screenshots/room1.png)
+![](/screenshots/room1.png)
    
 The GLFW library is the only dependancy, and we provide versions for [windows](/libglfw3.lib), [linux](/libglfw3.so), and [mac](/libglfw3.a). If they don't work for whatever reason and you still
 want the GUI, get glfw3-dev from your
@@ -134,7 +190,7 @@ When you are done editing the room, press
 In this mode the agents will start moving
 around and trying to reach the goal.
 
-![room2 GUI](/screenshots/room2.png)
+![](/screenshots/room2.png)
 
 - Use numbers `0`..`9` to control the speed
   of the simulation.
@@ -155,7 +211,7 @@ around and trying to reach the goal.
 visualizer will will highlight the table
 entries of agents as it updates.
 
-![Q-table visualizer](/screenshots/q-visualizer.png)
+![](/screenshots/q-visualizer.png)
 
 - Each cell will split into 5 parts, 1 for
   each of the 5 actions an agent can take.
