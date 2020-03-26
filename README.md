@@ -1,6 +1,6 @@
 # Escape Room
 
-<img align="left" width="110" height="100" src="/screenshots/agent.png">
+<img align="center" width="110" height="100" src="/screenshots/agent.png">
 
 Agents use reinforcement learning to learn
 how to navigate and escape a small room as
