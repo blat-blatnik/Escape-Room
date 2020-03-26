@@ -1,6 +1,6 @@
 # Escape Room
 
-<img align="center" width="110" height="100" src="/screenshots/agent.png">
+<img align="left" width="110" height="100" src="/screenshots/agent.png">
 
 Agents use reinforcement learning to learn
 how to navigate and escape a small room as
@@ -22,9 +22,11 @@ The [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensional
 
 <br/>
 
+<img align="right" width="60" height="140" src="/screenshots/corner-case.png">
+
 This algorithm works decently well, the agents will generally discover a pretty good escape path through the maze in a relative small number of rounds. However, it is far from perfect. Q-learning is generally known to have flaws in dynamic, multi-agent environments such as this one. The agents don't appear to learn to coordinate very well - for example they won't move "in unison", or help each other escape. Since the agents don't see diagonally, they can't predict when another agent will bump into them around a corner, which can sometimes make them get stuck for long periods of time.
 
-![](/screenshots/corner-case.png)
+<br/>
 
 ## The room
 
