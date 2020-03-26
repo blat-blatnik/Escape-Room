@@ -34,7 +34,7 @@ This is the equivalent of empty space. Agents can freely inhabit these tiles.
 
 ### Wall
 
-![](/screenshots/wall-tile.png)
+<img align="left" width="100" height="100" src="/screenshots/wall-tile.png">
 
 Agents cannot pass through these tiles by any means. As a side note, everything outside of the N&times;M room is also considered to be a wall.
 
