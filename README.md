@@ -39,6 +39,7 @@ This is the equivalent of empty space. Agents can freely inhabit these tiles.
 Agents cannot pass through these tiles by any means. As a side note, everything outside of the N&times;M room is also considered to be a wall.
 
 <br/>
+<br/>
 
 ### Door
 
@@ -65,6 +66,7 @@ Another dynamic element. Glass is very similar to doors - the agents first canno
 The bandage will heal any agent that walks over it back to the full 2 health points, and it will be consumed in the process. The bandage will be consumed even if the agent is _already_ at full health.
 
 <br/>
+<br/>
 
 ### Goal
 
@@ -72,6 +74,7 @@ The bandage will heal any agent that walks over it back to the full 2 health poi
 
 This marks the exit of the room - when an agents walks into a goal tile, they are removed from the room. There can be multiple goals in the room.
 
+<br/>
 <br/>
 
 ## Options
