@@ -79,6 +79,11 @@ This marks the exit of the room - when an agents walks into a goal tile, they ar
 <br/>
 <br/>
 
+## Requirements
+
+- c99 compiler
+- [GLFW](https://www.glfw.org/) (**optionally**)
+
 ## Options
 
 There are two versions of the program. We
@@ -96,7 +101,7 @@ the GUI, so compiling this version is a bit
 more complicated. Because of this, there is
 also an option to disable the GUI and avoid
 the dependancy. Library files are provided
-for you, in the same directory so we hope
+for you in the same directory so we hope
 that compiling the GUI won't be a problem.
 
 ## How to compiler with the GUI?
