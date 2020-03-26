@@ -42,8 +42,6 @@ Agents cannot pass through these tiles by any means. As a side note, everything 
 
 ### Door
 
-![](/screenshots/door-tile.png)
-
 <img align="left" width="100" height="100" src="/screenshots/door-tile.png">
 <img align="right" width="100" height="100" src="/screenshots/open-door-tile.png">
 
@@ -53,21 +51,20 @@ The door is a dynamic element in the room. The agents obviously cannot walk thro
 
 ### Glass
 
-![](/screenshots/glass-tile.png)
+<img align="left" width="100" height="100" src="/screenshots/glass-tile.png">
+<img align="right" width="100" height="100" src="/screenshots/broken-glass-tile.png">
 
 Another dynamic element. Glass is very similar to doors - the agents first cannot walk through it. The first time an agent tried to move into a glass tile, the glass will shatter, and the agent will stay in place. If an agent then walks over the glass, they will get hurt and lose 1 health point. This is the only way agents can get hurt in the room.
 
-![](/screenshots/broken-glass-tile.png)
-
 ### Bandage
 
-![](/screenshots/bandage-tile.png)
+<img align="left" width="100" height="100" src="/screenshots/bandage-tile.png">
 
 The bandage will heal any agent that walks over it back to the full 2 health points, and it will be consumed in the process. The bandage will be consumed even if the agent is _already_ at full health.
 
 ### Goal
 
-![](/screenshots/goal-tile.png)
+<img align="left" width="100" height="100" src="/screenshots/goal-tile.png">
 
 This marks the exit of the room - when an agents walks into a goal tile, they are removed from the room. There can be multiple goals in the room.
 
