@@ -40,15 +40,16 @@ Agents cannot pass through these tiles by any means. As a side note, everything 
 
 <br/>
 
----
-
 ### Door
 
 ![](/screenshots/door-tile.png)
 
+<img align="left" width="100" height="100" src="/screenshots/door-tile.png">
+<img align="right" width="100" height="100" src="/screenshots/open-door-tile.png">
+
 The door is a dynamic element in the room. The agents obviously cannot walk through them when they are closed. Rather, the first time an agent tries to move into a door cell, the door will be opened, but the agent will stay in place. The door will then stay open until the end of the simulation round since there is no way for the agents to close a door.
 
-![](/screenshots/open-door-tile.png)
+<br/>
 
 ### Glass
 
