@@ -18,7 +18,7 @@ The agents use [Q-learning](https://en.wikipedia.org/wiki/Q-learning) to learn a
 
 <img align="right" width="160" height="160" src="/screenshots/vision-radius.png">
 
-The [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality) definitely rears its ugly head here, and for this assignment we were asked to limit our state space to no more than 1,000,000 states. As a result of this, the agents have a very limited view of the environment. They can only see 2 tiles away in each of the 4 directions around them. They also don't exactly see the tiles in their vision - they only know whether another agent occupies them, and if the tile is glass, a door, or a bandage they can see whether the glass was shattered, or door was opened, or bandage taken. This is a huge handicap, especially since the agents cannot see diagonally. However, it does mean there are less than 1,000,000 states in a 8&times;9 room.
+The [curse of dimensionality](https://en.wikipedia.org/wiki/Curse_of_dimensionality) definitely rears its ugly head here, and for this assignment we were asked to limit our state space to no more than 1'000'000 states. As a result of this, the agents have a very limited view of the environment. They can only see 2 tiles away in each of the 4 directions around them. They also don't exactly see the tiles in their vision - they only know whether another agent occupies them, and if the tile is glass, a door, or a bandage they can see whether the glass was shattered, or door was opened, or bandage taken. This is a huge handicap, especially since the agents cannot see diagonally. However, it does mean there are less than 1'000'000 states in a 8&times;9 room.
 
 <img align="right" width="90" height="120" src="/screenshots/corner-case.png">
 
