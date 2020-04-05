@@ -132,7 +132,7 @@ package manager, or [download GLFW](https://www.glfw.org/download.html)
 and try again. Sorry.
 
 If you give up on compiling, there are
-pre-compiled programs for [windows](/bin/escape.exe) and [linux](/bin/escape.out)
+pre-compiled standalone versions of the program for [windows](/bin/escape.exe) and [linux](/bin/escape.out)
 in the [`/bin`](/bin) directory.
 
 ## How to compile without the GUI? (NOGUI)
@@ -144,6 +144,10 @@ $ gcc escape.c -std=c99 -D NOGUI -lm
 ```
 
 ```bash
+$ clang escape.c -std=c99 -D NOGUI -lm
+```
+
+```bash
 $ cl escape.c -D NOGUI
 ```
 
@@ -152,13 +156,13 @@ the program to run faster.
 
 ## How to run?
 
-Simply run the exectuable. A prompt/window will appear and typing "h"
+Simply run the exectuable. A prompt/window will appear and typing `h`
 will show you a short reference of commands
 you can use.
 
 ## How to reproduce the paper results?
 
-Type "reproduce" into the prompt. If you are using the GUI, pressing `X` will bring up the prompt.
+Type `reproduce` into the prompt. If you are using the GUI, pressing `X` will bring up the prompt.
 
 MAKE SURE that [room1.txt](/room1.txt), [room2.txt](/room2.txt) and [room3.txt](/room3.txt) all exist **in the same directory**.
 
