@@ -211,7 +211,7 @@ around and trying to reach the goal.
 
 ![](/screenshots/room2.png)
 
-- Use numbers <kbd>0</kbd>..<kbd>9</kbd> to control the speed
+- Use numbers <kbd>0..9</kbd> to control the speed
   of the simulation.
 - After 200 turns, the simulation resets.
 - Press <kbd>F</kbd> to run the simulation really
