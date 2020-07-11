@@ -162,7 +162,7 @@ you can use.
 
 ## How to reproduce the paper results?
 
-Type `reproduce` into the prompt. If you are using the GUI, pressing `X` will bring up the prompt.
+Type `reproduce` into the prompt. If you are using the GUI, pressing <kbd>X</kbd> will bring up the prompt.
 
 MAKE SURE that [room1.txt](/room1.txt), [room2.txt](/room2.txt) and [room3.txt](/room3.txt) all exist **in the same directory**.
 
@@ -173,14 +173,14 @@ fairly straightforward, but using the GUI
 is a bit more challenging since we didn't
 implement any text rendering.
 
-You can press `H` at any point to print
+You can press <kbd>H</kbd> at any point to print
 out a help reference to your terminal.
 
-At any point you can press `X` to access
+At any point you can press <kbd>X</kbd> to access
 the command prompt version of the program.
 For example, if you want to open a room
 from file `ROOM.txt`:
-1. press `X`, the window will minimize
+1. press <kbd>X</kbd>, the window will minimize
 2. type `load ROOM.txt` into the prompt
 
 ## Edit mode
@@ -188,17 +188,16 @@ from file `ROOM.txt`:
 When you launch the GUI, you will be in
 _EDIT_ mode by default. This means you can
 edit the room using your mouse.
-- Use the `mouse wheel` to _select_ something.
-- `Click` to _place_ your selection.
-- `Right click` to _remove_ it.
+- Use the <kbd>Scroll-wheel</kbd> to _select_ something.
+- <kbd>Left-click</kbd> to _place_ your selection.
+- <kbd>Right-click</kbd> to _remove_ it.
 - The top left of the screen will show
   your current selection.
-- You can also _select_ something by `middle
-  clicking` on it.
+- You can also _select_ something by <kbd>Middle-click</kbd>ing on it.
 - If your current selection is an agent,
-  you can `drag` the agents with your mouse.
-- Use the `arrow keys` to _resize_ the room.
-- You can press `CTRL+Z/Y` to _undo/redo_.
+  you can <kbd>Click-drag</kbd> the agents with your mouse.
+- Use <kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd> <kbd>↓</kbd> to _resize_ the room.
+- You can press <kbd>CTRL</kbd>+<kbd>Z</kbd>/<kbd>Y</kbd> to _undo/redo_.
 - You can also edit rooms by opening up
   a room text file with your text editor.
 - When you exit the GUI your room will be
@@ -208,28 +207,28 @@ edit the room using your mouse.
 ## Run mode
 
 When you are done editing the room, press
-`ENTER` or `SPACE` to switch to _RUN_ mode.
+<kbd>ENTER</kbd> or <kbd>SPACE</kbd> to switch to _RUN_ mode.
 In this mode the agents will start moving
 around and trying to reach the goal.
 
 ![](/screenshots/room2.png)
 
-- Use numbers `0`..`9` to control the speed
+- Use numbers <kbd>0</kbd>..<kbd>9</kbd> to control the speed
   of the simulation.
 - After 200 turns, the simulation resets.
-- Press `F` to run the simulation really
-  quickly. Press `F` again to slow down.
+- Press <kbd>F</kbd> to run the simulation really
+  quickly. Press <kbd>F</kbd> again to slow down.
 - If you want to save the results to a file
-  Press `X` and type `saveto YOURFILE` at
+  Press <kbd>X</kbd> and type `saveto YOURFILE` at
   the prompt. New results will now be added
   to `YOURFILE` as CSV files.
-- You can _PAUSE_ by pressing `SPACE`. press
-  `SPACE` again to _unpause_, or press `ENTER`
+- You can _PAUSE_ by pressing <kbd>SPACE</kbd>. press
+  <kbd>SPACE</kbd> again to _unpause_, or press <kbd>ENTER</kbd>
   to go back to _EDIT_ mode.
 
 ## Q-table visualizer
 
-`V` toggles the Q-table _visualizer_. The
+<kbd>V</kbd> toggles the Q-table _visualizer_. The
 visualizer will will highlight the table
 entries of agents as it updates.
 
@@ -249,7 +248,7 @@ entries of agents as it updates.
   This indicates that you are visualizing
   Q-entries only for agents that have **2
   points of health** (which is the maximum).
-- Press `V` again, and a _red_ outline will
+- Press <kbd>V</kbd> again, and a _red_ outline will
   replace the _green_ one. You are now seeing
   the Q-entries only for agents that have
   1 point of health.
