@@ -8,8 +8,6 @@ quickly as possible.
 
 This was for a final project for the Reinforcement Learning Practical course from the University of Groningen.
 
-email s3301419@student.rug.nl
-
 ## How it works
 
 The _room_ is represented by a grid of N&times;M cells. Multiple _agents_ can inhabit this room, and try to escape the room by reaching the "goal" cell, while avoiding death. Each agent starts the escape with 2 point of health, and walking over broken glass lowers their health by 1 point. When their health drops to 0, they die. Each simulation round lasts for 200 time steps, after which the simulation is reset and the whole escape process starts again. Each agent gets 1 move per time-step. They can move in any of the 4 direction, or they can stand still. If two agents try to walk into the same tile, they "bump into each other" and both agents remain on the tile they started for that turn.
